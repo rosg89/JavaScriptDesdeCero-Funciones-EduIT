@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+
+		var numero;
+		var sumaP = 0;
+		var sumaN = 0;
+		var sumaC = 0;
+		var cpa = 0;
+		var cim = 0;
+
+
+
+
+		function esPar() {
+
+		}
+
+
+
+
+		function CalcularPorcentaje(cant, total) {
+			var f;
+			f = cant*100/total;
+			return f;
+		}
+
+
+
+
+
+
+		for (var i = 0; i < 10; i++) {
+			numero = prompt('Ingrese un numero negativo, positivo o cero');
+			numero = parseInt(numero);
+
+
+			if (numero>0) {
+				alert('Numero positivo');
+				sumaP++;
+
+			} else if (numero==0) {
+				alert('Numero cero');
+				sumaC++;
+			} else {
+				alert('Numero negativo');
+				sumaN++;
+			}
+
+			if (numero%2==0) {
+				cpa++;
+			} else {
+				cim++;
+			}
+
+
+		}
+
+
+		var porcentajeP=CalcularPorcentaje(sumaP,10);
+		var porcentajeN=CalcularPorcentaje(sumaN,10);
+		var porcentajeCero=CalcularPorcentaje(sumaC,10);
+		var porcentajePar=CalcularPorcentaje(cpa,10);
+		var porcentajeImpar=CalcularPorcentaje(cim,10);
+
+
+
+		document.write('La cantidad de numeros positivos es de ' + sumaP + ', la cantidad de numeros negativos es de ' + sumaN + ' y la cantidad de ceros es de ' + sumaC + '<br>');
+		document.write('La cantidad de numeros pares es de ' + cpa + ' y la cantidad de numeros impares es de ' + cim + '<br>');
+		document.write('El porcentaje de numeros positivos es de ' + porcentajeP + '%, el porcentaje de numeros negativos es de ' + porcentajeN + '% y el porcentaje de ceros es de ' + porcentajeCero + '%' + '<br>');
+		document.write('El porcentaje de pares es ' + porcentajePar + '% y el porcentaje de impares es de ' + porcentajeImpar + '%' + '<br>');
+
+	</script>
+	
+</body>
+</html>
